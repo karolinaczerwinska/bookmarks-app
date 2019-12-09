@@ -1,0 +1,22 @@
+:host {
+    mat-radio-group {
+        display: flex;
+        justify-content: center;
+        margin: 3rem 0;
+    }
+    .mat-radio-button ~ .mat-radio-button,
+    .mat-form-field ~ .mat-form-field,
+    .add-button {
+        margin-left: 24px;
+    }
+    .form {
+        display: flex;
+        justify-content: center;
+    }
+    .form-select {
+        width: 100vw;
+    }
+    .form-control {
+        width: 100%;
+    }
+}

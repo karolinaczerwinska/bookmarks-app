@@ -1,0 +1,14 @@
+:host {
+  router-outlet {
+    display: flex;
+    justify-content: center;
+  }
+  mat-toolbar {
+    background-color: lightslategray;
+    color: #fff;
+  }
+  .main-container {
+    height: calc(100vh - 64px);
+    padding-top: 5rem;
+  }
+}
