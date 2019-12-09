@@ -10,20 +10,23 @@
   <mat-form-field>
     <mat-label>Group</mat-label>
     <mat-select class="form-control" id="group" formControlName="group">
-      <mat-option *ngFor="let group of selectedGroup" [value]="group">
+      <mat-option *ngFor="let group of groups" [value]="group">
         {{group}}
       </mat-option>
     </mat-select>
   </mat-form-field>
  <button class="add-button" mat-button [disabled]="!form.valid">Add bookmark</button>
 </form>
+<!-- <mat-radio-group *ngFor="let group of bookmarkGroups | keyvalue" aria-label="Select an option">
+  <mat-radio-button (click)="filterByGroup(group.value)" value="{{group.value}}">{{group.value}}</mat-radio-button>
+</mat-radio-group> -->
 <mat-radio-group aria-label="Select an option">
   <mat-radio-button (click)="filterByGroup(bookmarkGroups.Work)" value="bookmarkGroups.Work">{{bookmarkGroups.Work}}</mat-radio-button>
   <mat-radio-button (click)="filterByGroup(bookmarkGroups.Leisure)" value="bookmarkGroups.Leisure">{{bookmarkGroups.Leisure}}</mat-radio-button>
   <mat-radio-button (click)="filterByGroup(bookmarkGroups.Personal)" value="bookmarkGroups.Personal">{{bookmarkGroups.Personal}}</mat-radio-button>
 </mat-radio-group>
 <mat-grid-list cols="4" rowHeight="2:1">
-  <mat-grid-tile  *ngFor="let bookmark of filteredBookmarks$ | async; index as i">
+  <mat-grid-tile *ngFor="let bookmark of filteredBookmarks$ | async; index as i">
     <mat-card>
       <mat-card-header>
         <mat-card-title>{{bookmark.group}}</mat-card-title>

@@ -18,8 +18,10 @@ export class BookmarksComponent implements OnInit {
   filteredBookmarks$: Observable<Bookmark[]>;
   form: FormGroup;
   fb: FormBuilder;
-  selectedGroup = [Group.Work, Group.Leisure, Group.Personal];
+  selectedGroup = Group.Work;  
+  groups = [Group.Work, Group.Leisure, Group.Personal];
   bookmarkGroups = Group;
+
 
   constructor(
     fb: FormBuilder,
@@ -36,6 +38,7 @@ export class BookmarksComponent implements OnInit {
 
   ngOnInit() {
     this.bookmarks$ = this.store.pipe(select('bookmarks'));
+    this.filterByGroup(this.selectedGroup);
   }
 
   onSubmit() {
