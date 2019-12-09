@@ -7,11 +7,11 @@ The application allows to create, remove and filter bookmarks by categories.
 ## Technologies used in the project
 * Angular 8 for creating the app
 * NGRX for managing the state
-* Angular Material for the user interface
+* Angular Material for the design
 
 ## Preview
 
-![alt txt](images/bookmarksapp-form)
+![alt txt](src/images/bookmarksapp.png)
 
 ## Run the application
 
