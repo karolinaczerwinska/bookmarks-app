@@ -1,5 +1,3 @@
-
-
 <form [formGroup]="form" class="form" (ngSubmit)="onSubmit()">
   <mat-form-field>
     <input class="form-control" matInput placeholder="Name" formControlName="name">
@@ -17,9 +15,6 @@
   </mat-form-field>
  <button class="add-button" mat-button [disabled]="!form.valid">Add bookmark</button>
 </form>
-<!-- <mat-radio-group *ngFor="let group of bookmarkGroups | keyvalue" aria-label="Select an option">
-  <mat-radio-button (click)="filterByGroup(group.value)" value="{{group.value}}">{{group.value}}</mat-radio-button>
-</mat-radio-group> -->
 <mat-radio-group aria-label="Select an option">
   <mat-radio-button (click)="filterByGroup(bookmarkGroups.Work)" value="bookmarkGroups.Work">{{bookmarkGroups.Work}}</mat-radio-button>
   <mat-radio-button (click)="filterByGroup(bookmarkGroups.Leisure)" value="bookmarkGroups.Leisure">{{bookmarkGroups.Leisure}}</mat-radio-button>
